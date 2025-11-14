@@ -20,6 +20,9 @@ body {
   width: 480px;
   border-radius: 10px;
   box-shadow: 2px 4px 16px rgba(0,0,0,.2);
+  display: flex;
+  gap: 16px;
+  padding: 16px;
 }
 
 .icon {
@@ -33,6 +36,16 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0; /* prevent shrinking when modal gets smaller */
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* container and button are both in header now so we can use this with flex for the desired spacing */
+  font-size: 18px; /* slightly larger font for header */
+  font-weight: 700; /* bold for header */
+  margin-bottom: 8px; /* spacing below header */
 }
 
 .close-button {
@@ -48,6 +61,10 @@ body {
   justify-content: center;
   border: 1px solid #eee;
   padding: 0;
+}
+
+.text {
+  margin-bottom: 16px;
 }
 
 button {
